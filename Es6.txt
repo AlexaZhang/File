@@ -1,0 +1,20 @@
+结构赋值   箭头函数  set和map    异步操作  类与对象   模块化
+
+“use strict”Es5开启严格模式 ES6不需要
+let声明的变量只在块级作用域{}内是一个块级作用域 
+let不能重复声明
+
+const 常量 数值不可修改 声明的时候必须赋值 也是块级作用域 对象可以修改
+
+Symbol 声明的值不相等每个值都只有一个  Symbol.for("变量")查找全局有的话就引用 Reflect.ownKeys(obj)获取变量
+
+Map   let map=new Map();  增：map.set("t",1); 查：let map_exist=map.has("t"); 改：map.set('t',2); 删：map.delete('t');
+ 
+Set     let set=new Set();         增: set.add({t:1});  查: let set_exist=set.has({t:1});  
+
+结构赋值 
+    结构赋值分类：
+	 数组结构赋值   对象结构赋值   字符串解构赋值    布尔值解构赋值   函数参数结构赋值   数值解构赋值 
+
+
+npm install tabel-polyfill --save-dev 安装兼容

@@ -1,0 +1,53 @@
+安装 全局
+    npm install webpack -g
+    npm install webpack-cli -g
+初始化package.json
+    npm init
+局部安装
+    npm install webpack --save
+    npm install webpack-cli --save
+本地服务器
+     npm install webpack-dev-server -S   
+     
+loader
+     引用插件html-webpack-glugin自动生成html里面的script标签 
+     plugins是一个数组 必须new HtmlWebpackPlugin 对象 想要多个和script标签放置的位置 template 模板文件  filename 生成的文件名称 inject可以选择script放在那个位置 head body
+     html文件压缩minify  removeComments：true 删除注释 collapseWhitespace：true删除空格 
+ 处理css样式
+     npm install css-loader style-loader --save-dev
+处理兼容前缀    
+     npm install postcss-loader --save-dev
+     
+     npm install autoprefixer --save-dev
+处理less，scss
+       先安装 npm i -D less-loader less
+ 配置webpack.config.js文件
+     module：{rules:[{test:/\.css$/,loader:"style-loader!css-loader"}]} 
+     
+处理图片
+     npm install url-loader --save-dev     
+     在模板文件中 img图片路径需要绝对路径 否则会找不到 
+     还可以使用  src="${require(../../img/git.png)}"   
+     把图片解析成baess64 格式
+     
+ 压缩处理图片
+    npm install image-webpack-loader --save-dev
+    可以使图片更小
+ 
+     
+     npm install image-webpack-loader --save-dev
+webpack 参数
+  --watch 热更新
+  --progress 读条
+  --display-modules 打包模块
+  --display-reasons 大包引用信息
+  webpack --config 配置文件名  运行webpack.config.js文件 如果不是默认名称使用
+  
+ 插件 
+     npm install html-wehpack-plugin --save-dev
+     npm install -D babel-loader @babel/core @babel/preset-env @babel/preset-react -S
+     exclude：不处理目录
+     include： 包含的目录范围
+     
+      
+     

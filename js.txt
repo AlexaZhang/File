@@ -1,0 +1,18 @@
+js隐藏手机号中间四位，变成*星号
+var tel = "13122223333";
+var reg = /^(\d{3})\d{4}(\d{4})$/;
+tel = tel.replace(reg, "$1****$2");
+console.log(tel);
+
+密码正则表达式 6-16位数字和字母的组合
+/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/
+
+手机号正则匹配
+var mPattern=/^1[3456789]{1}\d{9}$/;    
+
+检测 /手机 /pc  
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    window.location.href = "https://www.baidu.com/";
+} else {
+    window.location.href = "http://news.baidu.com/";
+} 
